@@ -547,3 +547,25 @@ footer {
   height: 45px;
   width: 45px;
 }
+/* RESPOSIVIDADE */
+
+@media (max-width: 1024px){
+
+  .inicio{
+    margin-left: 30px;
+  }
+  .cards1{
+    margin-left: 200px; 
+  }
+  .cards3{
+    margin-left: 665px;
+  }
+  #proj{
+    margin-left: 475px;
+  }
+  .cards{
+    gap: 60px;
+    display: flex;
+    
+  }
+}
