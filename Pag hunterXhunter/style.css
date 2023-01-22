@@ -252,6 +252,9 @@ p{
     .background-video {
         margin-top: -130px ;
     }
+    .conteudo-modal iframe{
+        width: 390px;
+    }
 }
 
 @media (max-width: 412px){
@@ -275,6 +278,9 @@ p{
         margin-left: 50px;
         width: 250px;
     }
+    .conteudo-modal iframe{
+        width: 370px;
+    }
     
 }
 @media(max-width: 375px){
@@ -283,6 +289,9 @@ p{
     }
     .background-video {
         margin-top: -110px;
+    }
+    .conteudo-modal iframe{
+        width: 355px;
     }
 }
 @media (max-width: 360px){
@@ -305,5 +314,8 @@ p{
         width: 120px;
         font-size: 15px;
         padding: 5px 5px;
+    }
+    .conteudo-modal iframe{
+        width: 340px;
     }
 }

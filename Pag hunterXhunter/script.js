@@ -1,19 +1,19 @@
-var mostra = document.querySelector('#btn');
+const mostra = document.getElementById("btn");
+const modal = document.querySelector(".modal")
+const video = document.getElementById("video")
 
-mostra.addEventListener('click', ()=>{
-
-    var md = document.querySelector('.modal')
-
-    md.style.opacity = '1';
-    md.style.visibility =  'visible';
+mostra.addEventListener("click", ()=>{
+    
+    video.setAttribute("src","https://www.youtube.com/embed/d6kBeJjTGnY")
+    modal.style.opacity = "1";
+    modal.style.visibility =  "visible";
 })
 
-var esconder = document.querySelector('#btn2')
+const esconder = document.getElementById("btn2")
 
-esconder.addEventListener('click',()=>{
+esconder.addEventListener("click",()=>{
     
-    var md = document.querySelector('.modal')
-
-    md.style.opacity = '0';
-    md.style.visibility =  'hidden';
+    video.setAttribute("src", "")
+    modal.style.opacity = "0";
+    modal.style.visibility =  "hidden";
 })
