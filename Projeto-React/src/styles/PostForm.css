@@ -1,0 +1,68 @@
+.post-form {
+  background-color: var(--white);
+  box-shadow: 0px 16px 40px 8px rgba(113, 128, 150, 0.12);
+  width: 592px;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.post-form input::placeholder {
+  color: var(--gray-400);
+}
+
+.post-form input {
+  color: var(--gray-700);
+}
+
+.post-form > input {
+  width: 100%;
+  border: none;
+  padding: 8px 0 24px;
+  outline: none;
+}
+
+.post-form > div {
+  border-top: 1px solid var(--gray-200);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-form > div input {
+  flex: 1;
+  margin: 0 16px;
+  border: none;
+  outline: 0;
+}
+
+.post-form > div button {
+  background-color: var(--primary);
+  padding: 16px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s ease-in;
+}
+
+.post-form > div button img {
+  margin-right: 16px;
+}
+
+.post-form > div button:hover {
+  background-color: var(--primary-light);
+}
+
+.post-form > div button:active,
+.post-form > div button:focus {
+  background-color: var(--primary-dark);
+}
+
+.post-form > div button:disabled {
+  background-color: var(--gray-400);
+  cursor: default;
+}
