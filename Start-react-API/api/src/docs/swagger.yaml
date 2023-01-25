@@ -1,0 +1,93 @@
+openapi: 3.0.3
+info:
+  title: Staart - Consumindo API's
+  description: API de exemplo para o curso de consumo de API's da plataforma Staart
+  version: 1.0.0
+servers:
+  - url: http://localhost:3001
+    description: Desenvolvimento local
+tags:
+  - name: Posts
+paths:
+  /posts:
+    get:
+      tags:
+        - Posts
+      description: Obtém a lista de posts cadastrados
+      responses:
+        200:
+          $ref: '#/components/responses/PostsList'
+        500:
+          description: Um erro inesperado aconteceu
+    post:
+      tags:
+        - Posts
+      description: Cadastra um novo post
+      requestBody:
+        $ref: '#/components/responses/PostCreationBody'
+      responses:
+        201:
+          description: Post cadastrado com sucesso
+        400:
+          $ref: '#/components/responses/BadRequest'
+        500:
+          description: Um erro inesperado aconteceu
+  /posts/most-viewed:
+    get:
+      tags:
+        - Posts
+      description: Obtém os 3 posts mais vistos
+      responses:
+        200:
+          $ref: '#/components/responses/PostsList'
+        500:
+          description: Um erro inesperado aconteceu
+components:
+  responses:
+    PostsList:
+      content:
+        application/json:
+          schema:
+            description: Lista de posts obtida com sucesso
+            $ref: '#/schemas/PostsList'
+    PostCreationBody:
+      required: true
+      description: Informações do novo post
+      content:
+        application/json:
+          schema:
+            $ref: '#/schemas/PostCreationBody'
+    BadRequest:
+      content:
+        application/json:
+          schema:
+            description: Requisição inválida
+            $ref: '#/schemas/BadRequest'
+schemas:
+  PostsList:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        content:
+          type: string
+        userName:
+          type: string
+        publishedAt:
+          type: string
+  PostCreationBody:
+    type: object
+    properties:
+      content:
+        type: string
+      userName:
+        type: string
+  BadRequest:
+    type: object
+    properties:
+      code:
+        type: string
+      error:
+        type: string
