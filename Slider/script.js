@@ -37,3 +37,21 @@ controls.forEach((control)=>{
     
     });
 });
+
+
+const mostra = document.getElementById('btn')
+const modal = document.querySelector('.modal')
+const esconder = document.getElementById('btn2')
+
+mostra.addEventListener('click',() => {
+
+    modal.style.opacity = "1";
+    modal.style.visibility = "visible"
+
+})
+
+esconder.addEventListener('click',() => {
+
+    modal.style.opacity = "0";
+    modal.style.visibility = "hidden"
+})

@@ -150,3 +150,44 @@ footer{
         transform: translateX(10px);
     }
 }
+
+.modal{
+    background-color: rgba(52, 52, 50, 0.749);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.conteudo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.conteudo-modal img{
+    width: 400px;
+    height: 600px;
+}
+
+.fecha-modal{
+    background-color: white;
+    color: #D54D01;
+    font-weight: bold;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.fecha-modal:hover{
+    background-color: #D54D01;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
