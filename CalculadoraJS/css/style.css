@@ -32,8 +32,8 @@
   #calc {
     width: 400px;
     padding: 0.5em;
-    background-color: #c4c4c4;
-    color: #000;
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
     opacity: 0;
@@ -43,7 +43,7 @@
   #calc h3 {
     font-size: 0.8em;
     font-weight: 300;
-    color: #666;
+    color: white;
   }
 
   #calc h3 button{
@@ -89,12 +89,12 @@
     border-radius: 0;
     height: 4em;
     font-size: 1.2em;
-    background-color: #dbdbdb;
+    background-color: #111111;
     cursor: pointer;
   }
   
   #buttons-container .number {
-    background-color: #f3f3f3;
+    background-color: #2c2c2c;
   }
   
   #buttons-container button:hover {
@@ -104,12 +104,12 @@
   
   #buttons-container #equal-btn {
     grid-column: span 2;
-    background-color: #75a5cb;
+    background-color: #510080;
   }
   
   #buttons-container #equal-btn:hover {
     grid-column: span 2;
-    background-color: #3a91d8;
+    background-color: #da44ff;
   }
 
   #icon{
