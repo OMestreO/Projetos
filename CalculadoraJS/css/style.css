@@ -12,6 +12,22 @@
     justify-content: center;
     padding: 3em;
   }
+
+  .modal-content{
+    width: 125px;
+    height: 130px;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+    margin-left: 80px;
+  }
+  .modal-content:hover{
+    border: 1px solid cyan;
+  }
   
   #calc {
     width: 400px;
@@ -20,12 +36,27 @@
     color: #000;
     display: flex;
     flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
   }
   
   #calc h3 {
     font-size: 0.8em;
     font-weight: 300;
     color: #666;
+  }
+
+  #calc h3 button{
+    color: white;
+    margin-left: 110px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    background: red;
+    text-align: center;
+  }
+  #calc h3 button:hover{
+    border: 2px solid white;
   }
   
   #operations {
@@ -80,3 +111,10 @@
     grid-column: span 2;
     background-color: #3a91d8;
   }
+
+  #icon{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+

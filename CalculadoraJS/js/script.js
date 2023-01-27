@@ -2,6 +2,10 @@ const previousOperationText = document.querySelector("#previous-operation");
 const currentOperationText = document.querySelector("#current-operation");
 const buttons = document.querySelectorAll("#buttons-container button");
 
+const mostra = document.getElementById('calc')
+const modal = document.getElementById('btn-modal')
+const fechaModal = document.getElementById('fecha-modal') 
+
 class Calculator {
     constructor(previousOperationText, currentOperationText){
         this.previousOperationText = previousOperationText;
@@ -128,4 +132,14 @@ buttons.forEach((btn) => {
             calc.processOperation(value)
         }
     })
+})
+
+modal.addEventListener("click",() => {
+    mostra.style.opacity=  '1',
+    mostra.style.visibility = 'visible';
+})
+
+fechaModal.addEventListener("click",() => {
+    mostra.style.opacity=  '0',
+    mostra.style.visibility = 'hidden';
 })
