@@ -14,22 +14,69 @@ document.addEventListener("mouseout", () => {
   cursor.style.display = "none";
 })
 
-const btn = document.getElementById('btn');
-const mostra = document.getElementById('back-cube');
-const btn2 = document.getElementById('fecha-modal');
+const btnCube = document.getElementById('btn-cube');
+const cube = document.getElementById('back-cube');
 
-btn.addEventListener('click', () => {
-  mostra.style.opacity = "1";
-  mostra.style.visibility = "visible";
-  
-  btn2.style.opacity = "1";
-  btn2.style.visibility = "visible";
-})
+var Clicks = {
+  ClickCube : 0,
+  ClickAbout : 0,
+  ClickPortfolio : 0,
+  ClickContato : 0
 
-btn2.addEventListener('click', () => {
-  mostra.style.opacity = "0";
-  mostra.style.visibility = "hidden";
+}
+
+var sumir = (countClick , x) =>{
+
+  if(countClick === 0){
+
+    x.style.opacity = "0";
+    x.style.visibility = "hidden";
+    
+    }
+}
+
+const btnAbout = document.getElementById('btn-about');
+const about = document.getElementById('about');
+
+btnCube.addEventListener('click', () => {
+
+  cube.style.opacity = "1";
+  cube.style.visibility = "visible";
   
-  btn2.style.opacity = "1";
-  btn2.style.visibility = "hidden";
-})
+  Clicks.ClickCube =Clicks.ClickCube + 1;
+
+  countClick = Clicks.ClickCube % 2;
+
+  about.style.opacity = "0";
+  about.style.visibility = "hidden";
+  
+  Clicks.ClickAbout = 0
+  Clicks.ClickPortfolio = 0
+  Clicks.ClickContato = 0
+
+  sumir(countClick, cube)
+
+  }
+)
+
+
+btnAbout.addEventListener('click',() =>{
+    
+ about.style.opacity = "1";
+ about.style.visibility = "visible";
+
+ Clicks.ClickAbout = Clicks.ClickAbout + 1;
+
+  countClick = Clicks.ClickAbout % 2;
+
+  cube.style.opacity = "0";
+  cube.style.visibility = "hidden";
+
+  Clicks.ClickCube = 0
+  Clicks.ClickPortfolio = 0
+  Clicks.ClickContato = 0
+
+  sumir(countClick, about)
+
+  }
+)

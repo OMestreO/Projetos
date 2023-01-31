@@ -1,4 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+
+@keyframes roda {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @keyframes colors {
   0%{
@@ -18,13 +30,12 @@
 
 body
 {
-  
   background: #14213D;
 }
 
 #nav{
   margin-top: 20%;
-  margin-left: 50%;
+  margin-left: 60%;
   width: 40vw;
   height: 200px;
   display: flex;
@@ -262,26 +273,148 @@ ul li a:hover::before
   visibility: hidden;
 }
 
-#btn2
+#about
 {
+  position: absolute;
+  flex-direction: column;
+  top: 40%;
+  left: 10%;
+  opacity: 0;
+  visibility: hidden;
+}
+  
+#start,
+#title,
+#text
+{
+  color: white;
+}
+
+#start,
+#title
+{
+  font-family: 'aboreto', cursive;
+}
+
+#text
+{
+  font-family: 'poppins';
+  width: 650px;
+}
+
+#title
+{
+  font-size: 30px;
+}
+
+#portfolio
+{
+  margin-top: -20%;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 320;
+  margin-left: 20px;
+  font-family: 'poppins';
   text-align: center;
-  width: 70px;
-  position: relative;
-  display: inline-block;
+}
+
+#fundo-1,
+#fundo-2,
+#fundo-3
+{
+  background: #394551;
+  width: 300px;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  z-index: -2;
+  border-radius: 10px;
+}
+
+#fundo-1::after,
+#fundo-2::after,
+#fundo-3::after
+{
+  content: "";
+  inset: 20px 17px;
+  width: 100px;
+  height: 590px;
+  margin-left: -20%;
+  background: #fca311;
+  animation: roda 5s linear infinite , colors 1s linear infinite;
+  z-index: -1;
+}
+
+#fundo-1 h3,
+#fundo-2 h3,
+#fundo-3 h3
+{
+  color: white;
+  margin-top: 20px;
+}
+
+#projetos-1,
+#projetos-2,
+#projetos-3
+{
+  background: #394551;
+  height: 300px;
+  width: 260px;
+  padding: 5px;
+  z-index: 2;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+#projetos-1 img,
+#projetos-2 img,
+#projetos-3 img
+{
+  border-radius: 10px;
+  width: 260px;
+  height: 150px;
+  border: 1px solid #fca311;   
+}
+
+#acces
+{
+  flex-direction: row;
+  display:flex;
+  gap: 220px;
+  height: 50px;
+  width: 600px;
+  margin-left: 8%;
+}
+
+#btn-acces-1,
+#btn-acces-2,
+#btn-acces-3
+{
+  font-family: 'poppins';
+  margin-top: 20px;
   padding: 6px 15px;
-  text-decoration: none;
   background: #2196f3;
   color: #fff;
+  text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  overflow: hidden;
-  z-index: 1;
+  margin-left: 12%;
+  flex-direction: row;
+  
 }
 
-#btn2:hover
+#btn-acces-1:hover,
+#btn-acces-2:hover,
+#btn-acces-3:hover
 {
-  transition: 1s;
-  transform:scale(1.5);
-  animation: colors 5s linear infinite;
+  transform: scale(1.4);
+  background: #ff3f81;
 }
-
