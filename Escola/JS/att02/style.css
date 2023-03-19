@@ -1,0 +1,9 @@
+main{
+  text-align: center;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 400px;
+  height: 150px;
+  margin: auto;
+}

@@ -1,0 +1,24 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+main{
+  border: 1px solid gray;
+  border-radius: 5px;
+  width: 250px;
+  height: 150px;
+  padding: 10px;
+  margin: auto;
+  margin-top: 3%;
+  text-align: center;
+}
+
+input,
+button{
+  margin: 10px;
+}
+
+#calculo{
+  position: absolute;
+  margin-left: 42%;
+}
